@@ -21,6 +21,7 @@ luac.out
 *.lib
 *.a
 *.la
+*.lua
 *.lo
 *.def
 *.exp
@@ -39,3 +40,8 @@ luac.out
 *.x86_64
 *.hex
 
+# Files for LuviX environment - JS / HTML / CSS / Python
+*.html
+*.js
+*.css
+*.py
