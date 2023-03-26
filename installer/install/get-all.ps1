@@ -1,4 +1,3 @@
-
 $LUVI_VERSION = "2.14.0"
 $LIT_VERSION = "3.8.5"
 # Environment variables take precedence
@@ -34,8 +33,8 @@ Download-File $LUVI_URL "luvi.exe"
 Download-File $LIT_URL "lit.zip"
 
 # Create lit.exe using lit
-Start-Process ".\luvix.exe" -ArgumentList "lit.zip -- make lit.zip litx.exe luvix.exe" -Wait -NoNewWindow
+Start-Process ".\luvi.exe" -ArgumentList "lit.zip -- make lit.zip lit.exe luvi.exe" -Wait -NoNewWindow
 # Cleanup
 Remove-Item "lit.zip"
 # Create luvit using lit
-Start-Process ".\litx.exe" -ArgumentList "make litx://luvit/luvit luvit.exe luvix.exe" -Wait -NoNewWindow
+Start-Process ".\lit.exe" -ArgumentList "make lit://luvit/luvit luvit.exe luvi.exe" -Wait -NoNewWindow
