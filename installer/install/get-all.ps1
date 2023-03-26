@@ -38,4 +38,4 @@ Start-Process ".\luvix.exe" -ArgumentList "lit.zip -- make lit.zip lit.exe luvix
 # Cleanup
 Remove-Item "lit.zip"
 # Create luvit using lit
-Start-Process ".\litx.exe" -ArgumentList "make lit://luvit/luvit luvit.exe luvix.exe" -Wait -NoNewWindow
+Start-Process ".\litx.exe" -ArgumentList "make litx://luvit/luvit luvit.exe luvix.exe" -Wait -NoNewWindow
