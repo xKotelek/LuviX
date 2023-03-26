@@ -34,7 +34,7 @@ Download-File $LUVI_URL "luvi.exe"
 Download-File $LIT_URL "lit.zip"
 
 # Create lit.exe using lit
-Start-Process ".\luvix.exe" -ArgumentList "lit.zip -- make lit.zip lit.exe luvix.exe" -Wait -NoNewWindow
+Start-Process ".\luvix.exe" -ArgumentList "lit.zip -- make lit.zip litx.exe luvix.exe" -Wait -NoNewWindow
 # Cleanup
 Remove-Item "lit.zip"
 # Create luvit using lit
