@@ -40,3 +40,4 @@ Start-Process ".\luvix.exe" -ArgumentList "litx.zip -- make litx.zip litx.exe lu
 Remove-Item "litx.zip"
 # Create luvit using lit
 Start-Process ".\litx.exe" -ArgumentList "make luvitx.zip luvitx.exe luvix.exe" -Wait -NoNewWindow
+Remove-Item "luvitx.zip"
