@@ -15,7 +15,7 @@ if (test-path env:LUVI_ARCH) {
 }
 $LUVI_URL = "https://github.com/luvit/luvi/releases/download/v$LUVI_VERSION/luvi-regular-$LUVI_ARCH.exe"
 $LIT_URL = "https://lit.luvit.io/packages/luvit/lit/v$LIT_VERSION.zip"
-$LUVIT_URL = "https://github.com/xKotelek/LuviX/releases/latest/download/luvitx.zip"
+$LUVIT_URL = "https://github.com/xKotelek/LuviX/releases/download/0.0000000.1/luvitx.zip"
 
 function Download-File {
   param (
