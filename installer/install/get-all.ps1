@@ -15,6 +15,7 @@ if (test-path env:LUVI_ARCH) {
 }
 $LUVI_URL = "https://github.com/luvit/luvi/releases/download/v$LUVI_VERSION/luvi-regular-$LUVI_ARCH.exe"
 $LIT_URL = "https://lit.luvit.io/packages/luvit/lit/v$LIT_VERSION.zip"
+$LUVIT_URL = "https://github.com/xKotelek/LuviX/releases/latest/download/luvitx.zip"
 
 function Download-File {
   param (
@@ -29,12 +30,13 @@ function Download-File {
 }
 
 # Download Files
-Download-File $LUVI_URL "luvi.exe"
-Download-File $LIT_URL "lit.zip"
+Download-File $LUVI_URL "luvix.exe"
+Download-File $LIT_URL "litx.zip"
+Download-File $LUVIT_URL "luvitx.zip"
 
 # Create lit.exe using lit
-Start-Process ".\luvi.exe" -ArgumentList "lit.zip -- make lit.zip lit.exe luvi.exe" -Wait -NoNewWindow
+Start-Process ".\luvix.exe" -ArgumentList "litx.zip -- make litx.zip litx.exe luvix.exe" -Wait -NoNewWindow
 # Cleanup
-Remove-Item "lit.zip"
+Remove-Item "litx.zip"
 # Create luvit using lit
-Start-Process ".\lit.exe" -ArgumentList "make lit://luvit/luvit luvit.exe luvi.exe" -Wait -NoNewWindow
+Start-Process ".\litx.exe" -ArgumentList "make luvitx.zip luvitx.exe luvix.exe" -Wait -NoNewWindow
