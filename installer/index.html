@@ -1,1 +1,45 @@
-Cool Stuff
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/681f16d40f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div id="title-bar" class="title-bar">
+        <a id="title-text">LuviX Installer</a>
+        <a id="minimize-btn"><i class="fa-sharp fa-regular fa-window-minimize"></i></a>
+        <a id="close-btn"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <br><br>
+    <img src="logo.png" id="logo" alt="LuviX Logo" width="128" height="128">
+    <a class="btn" id="go-btn" onclick="lesgo();">Go!</a>
+    <!-- Event Script -->
+    <script>
+        quit = document.getElementById("close-btn");
+        minimize = document.getElementById("minimize-btn");
+
+        quit.addEventListener("click", function() { window.electron.close(); });
+        minimize.addEventListener("click", function() { window.electron.minimize(); });
+
+        go = document.getElementById("go-btn");
+        logo = document.getElementById("logo");
+
+        titlebar = document.getElementById('title-bar');
+        $(window).on("load", () => {
+            titlebar.style.top = '-7px';
+            go.style.top = "100px";
+            logo.style.top = "50px";
+        });
+
+        function lesgo() {
+            go.style.transform = 'translateY(-350px)';
+            logo.style.transform = 'translateY(-400px)';
+            setTimeout(250, window.location.href="opt.html");
+        }
+    </script>
+</body>
+</html>
